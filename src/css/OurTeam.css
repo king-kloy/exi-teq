@@ -43,12 +43,39 @@
 }
 
 .role span {  
-  display:table;
-  margin:0 auto;
+  /* display:table;
+  margin:0 auto; */
   color: white;
   font-size: 20px;
 }
 
 .name {
   font-weight: bold;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .teams-container {
+    width: 40%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .team-card {
+    margin-top: 50px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .teams-container {
+    width: 60%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .team-card {
+    margin-top: 50px;
+    width: 250px;
+  }
 }

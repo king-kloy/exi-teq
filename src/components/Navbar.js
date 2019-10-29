@@ -2,7 +2,7 @@ import React from 'react';
 import FontAwesome from "react-fontawesome";
 import '../css/Navbar.css';
 
-import logo from "../logo.svg";
+import logo from "../images/logo.png";
 
 class Navbar extends React.Component {
   constructor() {
@@ -50,11 +50,11 @@ class Navbar extends React.Component {
             />
           
             
-              <img src={logo} alt="react-logo" />
+              <img src={logo} alt="react-logo" className="logo" />
        
           </div>
 
-          <div className="search-bar">
+          <div className="search-bar hide-search-bar">
             <input type="search" placeholder="search" />
             <FontAwesome
               className='search-icon'
@@ -63,7 +63,7 @@ class Navbar extends React.Component {
             />
           </div>
 
-          <nav>
+          <nav className="hide-nav">
             <ul className="nav-links" id="nav">
               <li>
                 <div className="cart-area">
@@ -95,7 +95,36 @@ class Navbar extends React.Component {
           (
             null
           )
-          }
+        }
+        <div className="search-bar hide-desktop">
+            <input type="search" placeholder="search" />
+            <FontAwesome
+              className='search-icon'
+              name='search'
+              size='1x'
+            />
+          </div>
+
+          <nav className="hide-desktop">
+            <ul className="nav-links" id="nav">
+              <li>
+                <div className="cart-area">
+                  <FontAwesome
+                  className='cart'
+                  name='shopping-cart'
+                  size='2x'
+                  /> 
+                  <div className="item-counter">13</div>
+                </div>
+              </li>             
+              <li>
+                <a href="/login" className="nav-link">Sign in</a>
+              </li>
+              <li >
+                <a href="signup" className="nav-link">Sign up</a>
+              </li>
+            </ul>
+          </nav>
       </div>
     );
   }
