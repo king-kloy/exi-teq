@@ -1,0 +1,8 @@
+.carousel {
+  height: 550px;
+  color: white;
+}
+
+.slide-1 {
+  background: url("../images/desk.jpg");
+}
